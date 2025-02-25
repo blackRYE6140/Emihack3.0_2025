@@ -18,7 +18,7 @@ tailChase.register();
 function Loader() {
   return (
     <div className="loader-container">
-      <l-tail-chase size="60" speed="1.75" color="#16a34a"/>
+      <l-tail-chase size="40" speed="1.75" color="#16a34a"/>
       <p>Veuillez patientez . . .</p>
     </div>
   );

@@ -1,0 +1,98 @@
+.hero-container2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 1200px;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  
+  /* Bloc gauche */
+  .gif-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 40%;
+  }
+  
+  .gif-container h2 {
+    font-size: 2.5rem;
+    color: #16a34a;
+    margin-bottom: 10px;
+  }
+  
+  .gif-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Bloc droit */
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 50%;
+  }
+  
+  /* Cartes */
+  .text-containerHero2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 15px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .text-containerHero2:hover {
+    transform: translateY(-5px);
+  }
+  
+  .text-containerHero2 p {
+    font-size: 1.1rem;
+    color: #125315;
+  }
+  
+  /* Icônes */
+  .icons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .iconHero2 {
+    font-size: 25px;
+    color:#125315;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .hero-container2 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+    }
+  
+    .gif-container {
+        width: 100%;
+        align-items: center;
+    }
+  
+    .cards-container {
+        width: 100%;
+    }
+  
+    .text-containerHero2 {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+  }
+  

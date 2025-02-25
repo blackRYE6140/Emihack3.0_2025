@@ -1,7 +1,7 @@
-import React from "react";
 import pauseGif from "../../../../assets/Images/Pause.gif";
 import { FaVideo, FaPuzzlePiece, FaGamepad } from "react-icons/fa";
 import { motion } from "framer-motion";
+import "../../../../assets/css/Hero2.css";
 
 const functionnality = [
   {

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import "../../../../assets/css/Hero.css"; // Assurez-vous d'ajouter votre fichier CSS
+import  { useState, useEffect } from "react";
 import img1 from "../../../../assets/Images/feed.jpeg"; // Une seule image
 import { motion } from "framer-motion";
+import "../../../../assets/css/Hero3.css"
 
 const Hero3 = () => {
     return (

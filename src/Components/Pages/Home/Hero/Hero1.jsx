@@ -1,9 +1,8 @@
-import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { motion } from "framer-motion";
 import { Model1 } from "../../../ModelsThreeJS/Model1";
-import "../../../../assets/css/Hero.css";
+import "../../../../assets/css/Hero1.css";
 
 
 const Hero1 = () => {

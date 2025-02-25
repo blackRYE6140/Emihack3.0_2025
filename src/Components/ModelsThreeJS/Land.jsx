@@ -6,9 +6,9 @@ export default function ModelLand(props) {
   return (
     <group {...props} 
     dispose={null} 
-    position={[0, -0.8 , 0]}
+    position={[0, -0.9 , 0]}
     rotation={[0.25 , 0 , 0]}
-    scale={[0.39, 0.38, 0.37]}
+    scale={[0.40, 0.40, 0.37]}
 >
       <mesh
         name="Soil_soil_0"
