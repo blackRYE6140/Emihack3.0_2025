@@ -1,0 +1,140 @@
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  width: 100%;
+}
+
+/* Logo aligné à gauche */
+.nav-logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #16a34a;
+  letter-spacing: 5px;
+  padding: 4px;
+}
+
+/* Menu centré */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.nav-link {
+  position: relative;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #16a34a;
+}
+
+/* Effet d’animation sous les liens */
+.nav-link::before,
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #16a34a;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-link::before {
+  top: 0;
+  transform: translateY(10px);
+}
+
+.nav-link::after {
+  bottom: 0;
+  transform: translateY(-10px);
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Icônes à droite */
+.nav-right {
+  display: flex;
+  padding-right: 3rem;
+  gap : 1rem
+}
+
+.icon{
+  background-color: #7e7a7a;
+  color: #fff;
+  padding: 1px;
+  height: 35px;
+  width: 50px;
+}
+.nav-mobile{
+  display: none;
+}
+
+
+/* MENU BURGER */
+.menu-icon {
+  display: flex;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: #16a34a;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: white;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      text-align: center;
+      z-index: 10;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+  .nav-icon{
+    display: none;
+      flex-direction: column;
+  }
+  .nav-right {
+      gap: 0.5rem;
+  }
+  .nav-mobile {
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    border: none;
+    background: none;
+  }
+  .nav-mobile{
+    display: flex;
+    padding-right : 1.5rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    border: none;
+    background: none;
+  }
+}

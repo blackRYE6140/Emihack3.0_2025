@@ -1,0 +1,149 @@
+.footer-svg {
+    width: 100vw;
+    height: 350px; /* Réduire la hauteur du footer */
+    position: relative;
+    background-color:rgb(14, 99, 45);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* S'assurer que le contenu commence en haut */
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.footer-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%; /* Ajuster le padding horizontal */
+    color: white;
+    text-align: center;
+    flex-wrap: wrap; /* Assurer que les éléments se réorganisent sur mobile */
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Assurer que les sections prennent de l'espace égal */
+}
+
+.footer-left h3, .footer-right h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center; /* Centrer les titres */
+}
+span{
+    color : #fff;
+    font-style : italic;
+    font-size : 1.5rem;
+    display : flex;
+    align-items : center;
+    justify-content : flex-start
+}
+.mern-icons {
+    display: flex;
+    gap: 10px;
+    font-size: 5rem;
+    margin-top: 10px;
+    justify-content: center; 
+    opacity: 0; /* Pour l'animation d'apparition */
+    animation: fadeIn 1s forwards; /* Animation d'apparition *//* Centrer les icônes MERN */
+}
+
+.mern-icon {
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.mern-icon:hover {
+    transform: rotate(360deg); /* Rotation complète */
+    color: #f39c12; 
+    cursor : pointer/* Changement de couleur */
+}
+
+/* Animation d'apparition des icônes lors du chargement de la page */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation au survol des icônes */
+.mern-icon:active {
+    transform: scale(1.2); /* Légère augmentation de la taille */
+}
+.footer-carousel {
+    width: 200px;
+}
+
+.footer-carousel img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 20px;
+    color: white;
+}
+.footer-sidebar {
+    width: 2px;
+    background-color: #fff; /* Couleur blanche pour séparer les sections */
+    height: 100%; /* Prendre toute la hauteur du footer */
+    margin: 0 20px; /* Espacement autour de la barre */
+}
+/* 🔥 Responsive */
+@media (max-width: 768px) {
+    .footer-svg {
+        height: auto; /* Réduire la hauteur sur mobile */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Passer en mode colonne sur mobile */
+        gap: 20px;
+        padding: 0 5%; /* Réduire le padding horizontal */
+    }
+
+    .footer-left h3, .footer-right h3 {
+        font-size: 1.2rem;
+    }
+
+    .mern-icons {
+        font-size: 1.5rem;
+    }
+
+    .footer-carousel {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-svg {
+        height: auto;
+        padding-top: 10px;
+    }
+
+    .footer-content {
+        padding: 0 20px; /* Ajuster encore plus le padding pour petits écrans */
+    }
+
+    .mern-icons {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,95 @@
+.container{
+  display: flex;
+  padding: 20px;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+.headerLevels{
+    margin: 0;
+}
+.containerLevels .headerLevels h2{
+    font-size: 20px;   
+    color: #16a34a; 
+    display: flex;
+    flex: 0 1;
+    z-index: -1;
+}
+.percentage{
+  display: flex;
+  justify-content: space-between;
+}
+.progressPercent{
+    text-align: center;
+    background-color: #eeeded;
+    color: #16a34a;
+    flex: 0 1 40%;
+    padding: 8px 0;
+    border-radius: 6px;
+    width: 100px;
+}
+.percentage .progressPercent{
+    background-color: #eeeded;
+    padding: 10px;
+    text-align: center;
+    width: 15rem;
+}
+.ProgressBar{
+    border: 1px solid #16a34a;
+    box-shadow: -1px 2px 8px 3px rgba(176, 179, 176, 0.3) inset;
+    height: 30px;
+    width: 20rem;
+    margin: 20px 0 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 6px;
+}
+.ProgressBar .progressBarChange{
+    height: 18px;
+    text-align: center;
+    border-radius: 5px;
+    background: #16a34a;
+}
+.containQuestion{
+    position: absolute;
+    align-items: center;
+    top:40%;
+    display: grid;
+}
+.answerOptions {
+    padding: 15px;
+    background-color: #eeeded;
+    line-height: 20px;
+    text-align: center;
+    width: 40rem;
+    border: none;
+    color: #16a34a;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0;
+  }
+
+  .answerOptions:hover {
+    -webkit-box-shadow: 0px 4px 16px -5px rgba(32, 201, 68, 0.75);
+    -moz-box-shadow: 0px 4px 16px -5px rgba(32, 201, 68, 0.75);
+    box-shadow: 0px 4px 16px -5px rgba(32, 201, 68, 0.75);
+    cursor: pointer;
+    color: #575555;
+  }
+  .btnSubmit {
+    align-items: center;
+    font-size: 15px;
+    font-family: "Nunito";
+    padding: 8px;
+    background-color: #16a34a;
+    color: #f5ecec;
+    border : none;
+    border-radius: 8px;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
