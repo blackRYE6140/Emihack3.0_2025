@@ -29,7 +29,7 @@
   line-height: 1.5;
 }
 .styles_content__1Phom{
-  width: 200px;
+  width: 40rem;
   height: 100px;
 }
 /* Bouton avec animation haut en bas et décalage vers la droite */
@@ -43,8 +43,8 @@
   border-radius: 20px;
   cursor: pointer;
   position: relative; /* Permet de modifier sa position par rapport à son emplacement initial */
-  left: 5rem;  /* Déplace le bouton 20px à droite */
-  top: 15px;   /* Déplace le bouton 10px vers le bas */
+  left: 13rem;  /* Déplace le bouton 20px à droite */
+  top: 45px;   /* Déplace le bouton 10px vers le bas */
   transition: all 0.3s ease-in-out;
   transform: translateX(20px); /* Déplace le bouton à droite */
   animation: bounce 1s ease-in-out infinite; /* Animation de rebond */

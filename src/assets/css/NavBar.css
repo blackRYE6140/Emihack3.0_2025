@@ -75,12 +75,21 @@
   gap : 1rem
 }
 
-.icon{
-  background-color: #7e7a7a;
-  color: #fff;
-  padding: 1px;
+.icon {
+  color: #474747;  /* Couleur verte */
+  padding: 0;      /* Supprimer le padding */
   height: 35px;
   width: 50px;
+  background: none; /* Pas de fond */
+  border: none;     /* Pas de bordure */
+}
+.icon:hover{
+  color: #16a34a;  /* Couleur verte */
+  padding: 0;      /* Supprimer le padding */
+  height: 35px;
+  width: 50px;
+  background: none; /* Pas de fond */
+  border: none;     /* Pas de bordure */
 }
 .nav-mobile{
   display: none;

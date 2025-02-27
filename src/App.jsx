@@ -8,6 +8,7 @@ import GreenLand from './Components/Pages/GeenLand/GreenLand';
 import LoginForm from "./Components/Pages/Login/Login";
 import SignupForm from "./Components/Pages/Signup/Signup";
 import OTPForm from './Components/Pages/OTP/otp';
+import Whiteboard from './Components/Pages/white-board/whiteBoard';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { tailChase} from "ldrs";
@@ -18,7 +19,7 @@ tailChase.register();
 function Loader() {
   return (
     <div className="loader-container">
-      <l-tail-chase size="40" speed="1.75" color="#16a34a"/>
+      <l-tail-chase size="40" speed="1.5" color="#16a34a"/>
       <p>Veuillez patientez . . .</p>
     </div>
   );
@@ -30,7 +31,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(true);
-    }, 3000); 
+    }, 1500); 
   }, []);
 
   return (
@@ -48,6 +49,7 @@ function App() {
             <Route path="/quiz" element={<Layout><Quiz /></Layout>} />
             <Route path="/greenLand" element={<Layout><GreenLand /></Layout>} />
             <Route path="/experience" element={<Layout><Experience /></Layout>} />
+            <Route path="/whiteBoard" element={<Layout><Whiteboard /></Layout>} />
           </Routes>
         </Router>
       )}

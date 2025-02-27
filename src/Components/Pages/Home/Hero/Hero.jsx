@@ -44,7 +44,6 @@ const Hero = () => {
                             >
                                 <button  className="start-button"  onClick={handleClick}> Découvrir</button>
                                
-                         
                       </ParticleEffectButton>
                     </motion.div>
 

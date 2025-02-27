@@ -1,10 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
-import {  FaUser, FaLanguage, FaMusic } from 'react-icons/fa';
+import React, { useState, useEffect } from 'react';
+import { FaUser, FaLanguage, FaMusic, FaVolumeMute } from 'react-icons/fa';
 import { FiAlignJustify } from "react-icons/fi";
 import '../../assets/css/NavBar.css';
 import { motion } from "framer-motion";
 import 'animate.css';
 import confetti from 'canvas-confetti';
+import useAudio from '../../assets/Animations/Sound'; // Importer le hook personnalisé
 import { driver } from "driver.js";
 import "driver.js/dist/driver.css";
 
@@ -12,7 +13,8 @@ const menuItems = [
   { path: "/home", label: "Accueil" },
   { path: "/quiz", label: "Quiz" },
   { path: "/greenland", label: "GreenLand" },
-  { path: "/experience", label: "Experience" }
+  { path: "/experience", label: "Experience" },
+  { path: "/whiteBoard", label: "Tableau blanc" },
 ];
 
 const menuItemVariants = {
@@ -33,16 +35,16 @@ const startDriverGuide = () => {
       { element: '.nav-links > li:nth-child(3)', popover: { title: 'GreenLand', description: 'Cliquez pour explorer GreenLand.' } },
       { element: '.nav-links > li:nth-child(4)', popover: { title: 'Experience', description: 'Cliquez pour découvrir et partager des expériences.' } },
     ],
- 
-  onDestroyStarted: () => {
-    if (!driverObj.hasNextStep() || confirm("Voulez-vous zapper l'intro?")) {
+    onDestroyStarted: () => {
+      if (!driverObj.hasNextStep() || confirm("Voulez-vous zapper l'intro?")) {
         driverObj.destroy();
-    }
-  },
-})
+      }
+    },
+  })
   driverObj.drive();
   sessionStorage.setItem('introShown', 'true');
 };
+
 const selectLanguage = (lang) => {
   confetti({
     particleCount: 150,
@@ -59,15 +61,10 @@ const selectLanguage = (lang) => {
     colors: ['rgb(97, 26, 26)', '#16a34a']
   });
 };
+
 const NavBar = () => {
   const [guideStarted, setGuideStarted] = useState(false);
-  const [playing , isPlaying] = useState(false);
-  const audioRef = useRef(null)
-
-  const toggle = (err) => {
-  audioRef.current.play() 
-  console.log(err)
-  }
+  const { isPlaying, play, pause } = useAudio();  // Utilisation du hook personnalisé
 
   useEffect(() => {
     const isIntroShownInSession = sessionStorage.getItem('introShown');
@@ -76,25 +73,17 @@ const NavBar = () => {
     if (!isIntroShownInSession) {
       startDriverGuide();
       setGuideStarted(true);
-      localStorage.setItem('driverTourCompleted', 'true'); 
+      localStorage.setItem('driverTourCompleted', 'true');
     }
     if (!isIntroShown) {
       localStorage.setItem('introShown', 'true');
-  }
-   
+    }
   }, []);
 
   return (
     <>
-     <div className="sound-effect">
-            <audio ref={audioRef} loop>
-                <source src={"../../assets/sounds/nature.mp3"} type="audio/mpeg"/>
-                Votre navigateur ne supporte pas les effets sonnores
-            </audio>
-        </div>
       <nav className="nav-container">
         <span className="nav-logo">GREEN HOUSE</span>
-        {/* Partie gauche : Logo et liens de navigation */}
         <div className="nav-left">
           <motion.ul
             className="nav-links"
@@ -115,13 +104,12 @@ const NavBar = () => {
           </motion.ul>
         </div>
 
-        {/* Partie droite : Boutons de connexion et de traduction */}
         <div className="nav-right">
-        <motion.button className="icon" whileHover={{ scale: 1.1 }}>
-            <FaMusic size={15} onClick={() =>toggle()}/>
+          <motion.button className="icon" whileHover={{ scale: 1.1 }} onClick={isPlaying ? pause : play}>
+            {isPlaying ? <FaVolumeMute size={15} /> : <FaMusic size={15} />}
           </motion.button>
           <motion.button className="icon" whileHover={{ scale: 1.1 }}>
-            <FaUser size={15}  />
+            <FaUser size={15} />
           </motion.button>
           <motion.button className="icon" whileHover={{ scale: 1.1 }}>
             <FaLanguage size={25} onClick={() => selectLanguage()} />
@@ -129,7 +117,7 @@ const NavBar = () => {
         </div>
 
         <div className="nav-mobile">
-         <FiAlignJustify />
+          <FiAlignJustify />
         </div>
       </nav>
     </>
