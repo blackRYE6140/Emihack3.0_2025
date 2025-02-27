@@ -1,5 +1,5 @@
 /* Container principal */
-.container {
+.containerQuiz {
   display: flex;
   flex-direction: column; /* Ajouté pour empiler les éléments */
   padding: 20px;

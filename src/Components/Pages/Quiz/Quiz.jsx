@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import ProgressBar from "./ProgressBar/ProgressBar";
 import ModalChart from "./ModalChart";
 import "../../../assets/css/Quiz.css";
@@ -103,7 +103,7 @@ const Quiz = () => {
 
   return (
     <div>
-      <div className="container">
+      <div className="containerQuiz">
         <ProgressBar total={rep.totalAnswered} score={rep.score} />
         <h2>La question est : {rep.question}</h2>
         <div className="containQuestion">

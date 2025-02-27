@@ -7,7 +7,7 @@ import '../../../assets/css/Experience.css'
 const Experience = () => {
   const [user, setUser] = useState({
     name: 'Ethan',
-    email: 'ethanrafalimanana.com',
+    email: 'ethanrafalimanana@gmail.com',
     role: 'Developpeur',
     profilePic: '/ReactMF_pwabuilder_score.png'
   });

@@ -105,7 +105,7 @@ function FloatingParticles() {
   );
 }
 
-export default function HeroGeometricLuxury({ title1 = "Innovative", title2 = "Sustainability" }) {
+export default function HeroGeometricLuxury({ title1 = "Green", title2 = "House" }) {
   const controls = useAnimation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
