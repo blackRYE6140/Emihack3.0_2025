@@ -1,5 +1,4 @@
 const QuizzandResponse = [
-<<<<<<< HEAD
   {
     quiz: [
       {
@@ -54,8 +53,6 @@ const QuizzandResponse = [
       }
     ]
   },
-=======
->>>>>>> 524d912287b76f7ece6fdf4591d98b0089bdf98e
     {
         quiz: {
             debutant: [

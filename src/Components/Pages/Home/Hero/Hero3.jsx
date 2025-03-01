@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// import  { useState, useEffect } from "react";
-=======
 import  { useState, useEffect } from "react";
->>>>>>> 524d912287b76f7ece6fdf4591d98b0089bdf98e
 import img1 from "../../../../assets/Images/feed.jpeg"; // Une seule image
 import { motion } from "framer-motion";
 import "../../../../assets/css/Hero3.css"

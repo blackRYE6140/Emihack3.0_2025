@@ -1,23 +1,11 @@
 import { defineConfig } from 'vite'
-<<<<<<< HEAD
-import react from '@vitejs/plugin-react-swc'
-import tailwindcss from '@tailwindcss/vite'
-import { VitePWA } from 'vite-plugin-pwa';
-
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: 
-  [
-=======
 import react from '@vitejs/plugin-react'
-
-import { VitePWA } from 'vite-plugin-pwa';
 import tailwindcss from '@tailwindcss/vite'
+import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
->>>>>>> 524d912287b76f7ece6fdf4591d98b0089bdf98e
     react(),
     tailwindcss(),
     VitePWA({
@@ -70,10 +58,6 @@ export default defineConfig({
           }
         ]
       }
-<<<<<<< HEAD
     })
-=======
-  })
->>>>>>> 524d912287b76f7ece6fdf4591d98b0089bdf98e
   ],
 })

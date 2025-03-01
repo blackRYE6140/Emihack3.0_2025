@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 @import 'tailwindcss';
-=======
->>>>>>> 524d912287b76f7ece6fdf4591d98b0089bdf98e
 
 body {
     height: 100%;
@@ -9,20 +6,15 @@ body {
     flex-direction: column;
     padding: 0;
     margin: 0;
-<<<<<<< HEAD
     font-family: "Poppins";
-=======
-    font-family: "Calibri";
->>>>>>> 524d912287b76f7ece6fdf4591d98b0089bdf98e
-    font-style: normal;
-    overflow-x: hidden;
 }
-
 .loader-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
+}
+
+.loader-container {
     margin-top: 20%;
     gap: 15px;
     z-index: 1;

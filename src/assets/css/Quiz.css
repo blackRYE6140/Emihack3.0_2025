@@ -1,5 +1,5 @@
 /* Container principal */
-<<<<<<< HEAD
+
 .globalContain{
   display: flex;
   align-items: center;
@@ -21,8 +21,7 @@
   align-items: flex-start;
   width: 40%;
 }
-=======
->>>>>>> 524d912287b76f7ece6fdf4591d98b0089bdf98e
+
 .containerQuiz {
   display: flex;
   flex-direction: column; /* Ajouté pour empiler les éléments */
@@ -32,11 +31,6 @@
   justify-content: center;
   gap: 2rem; /* Espacement entre les éléments */
   height: 70vh;
-<<<<<<< HEAD
-
- 
-=======
->>>>>>> 524d912287b76f7ece6fdf4591d98b0089bdf98e
   background: url("../svg/grid-globe.svg");
   background-repeat: no-repeat;
   background-position: right;
@@ -91,10 +85,6 @@
   outline: none;
   box-shadow: 0 0 0 4px rgba(16, 164, 74, 0.6); /* Ombre lors du focus */
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 524d912287b76f7ece6fdf4591d98b0089bdf98e
 /* Progress bar */
 .ProgressBar {
   border: 1px solid #16a34a;
