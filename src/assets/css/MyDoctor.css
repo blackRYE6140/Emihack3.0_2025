@@ -1,0 +1,128 @@
+.harona-chat {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff; /* Fond clair */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 10rem; /* Réduit les espacements internes */
+  }
+  
+  
+  .lohateny-chat {
+    background-color: #ffffff;
+    color: #333333; /* Texte sombre */
+    padding: 16px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;/* Aligne le texte et l'image verticalement */
+    font-size: 24px;
+    font-weight: 600;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .lohateny-chat h2 {
+    margin: 0;
+    margin-right: 10px; /* Ajoute un espacement entre le texte et l'image */
+  }
+  
+  .lohateny-chat img {
+    width: 20%; /* Réduit la taille du GIF */
+    max-width: 80px; /* Taille maximale de l'image */
+    height: auto; /* Garde la proportion de l'image */
+  }
+  
+  
+  /* Message container */
+  .boaty-chat {
+    flex-grow: 1;
+    padding: 16px;
+    overflow-y: auto;
+    background-color: #ffffff;
+  }
+  
+  /* Messages style */
+  .hafatra {
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    background-color: transparent; /* Pas de fond */
+    color: #333333; /* Texte sombre */
+  }
+  
+  .hafatra.user {
+    align-self: flex-end;
+    text-align: right;
+  }
+  
+  .hafatra.bot {
+    align-self: flex-start;
+    text-align: left;
+  }
+  
+  /* Chat input container */
+  .fampidirana-chat {
+    width: 100%; /* Assure que le conteneur occupe toute la largeur */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    position: relative;
+    gap: 4px; /* Espace entre le textarea et le bouton */
+  }
+  
+  .fampidirana-chat textarea {
+   justify-content: center;
+    width: 100%; /* Agrandit le textarea */
+    padding: 12px;
+    height: 8rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 14px;
+    outline: none;
+    background-color: #ffffff;
+    color: #333333;
+    resize: none; /* Empêche le redimensionnement manuel */
+    overflow-y: hidden; /* Cache la barre de défilement */
+  }
+  
+  
+.fampidirana-chat textarea:focus {
+    border-color: #29915e; /* Bordure verte au focus */
+  }
+  
+  .fampidirana-chat button {
+    background-color: transparent; /* Pas de fond */
+    border: none;
+    padding: 10px;
+    color: #333333;
+    cursor: pointer;
+    font-size: 28px;
+    transition: color 0.3s;
+  }
+  
+  .fampidirana-chat button:focus {
+    outline: none;
+  }
+  
+  .fampidirana-chat button:hover {
+    color: #00e676; /* Couleur verte au survol */
+  }
+  
+  .fampidirana-chat .send-icon {
+    font-size: 20px; /* Taille de l'icône */
+    color: #333333; /* Couleur sombre */
+  }
+  
+  .fampidirana-chat .send-icon:hover {
+    color: #00e676; /* Couleur verte au survol */
+  }
+  

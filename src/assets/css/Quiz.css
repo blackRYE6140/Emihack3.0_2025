@@ -1,0 +1,122 @@
+/* Container principal */
+.globalContain{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: url("../svg/grid-globe.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 50%;
+  background-color: #e7e7e7;
+  z-index : 0;
+  position: relative;
+}
+.quiz-left{
+  display: flex;
+  position: relative; /* Nécessaire pour que le z-index fonctionne */
+  z-index: 10; /* Place le modèle 3D devant les autres éléments */
+  align-items: flex-start;
+  width: 40%;
+}
+.containerQuiz {
+  display: flex;
+  flex-direction: column; /* Ajouté pour empiler les éléments */
+  padding: 20px;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /* Espacement entre les éléments */
+  height: 70vh;
+
+ 
+}
+
+/* Niveau de difficulté en haut */
+.containerLevels {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px; /* Espacement avec les questions */
+}
+
+.headerLevels h2 {
+  font-size: 20px;
+  color: #16a34a;
+  margin: 0;
+}
+
+/* Question et options */
+.containQuestion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Espacement entre les options */
+}
+
+.answerOptions {
+  padding: 12px 24px;
+  background: linear-gradient(to right, #22c55e, #10b981); /* Gradient du vert au vert émeraude */
+  color: white;
+  width: 30rem;
+  border-radius: 9999px; /* Bordure arrondie */
+  font-weight: 500;
+  font-size: 1.125rem; /* Taille du texte */
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.3s ease; /* Transition pour le hover */
+  box-shadow: 0px 4px 16px rgba(32, 201, 68, 0.25);
+}
+
+.answerOptions:hover {
+  background: linear-gradient(to right, #16a34a, #059669); /* Changer la couleur du gradient au survol */
+  transform: translateY(-4px); /* Légère élévation */
+  box-shadow: 0px 8px 24px rgba(32, 201, 68, 0.35); /* Ombre plus marquée */
+}
+.answerOptions:focus{
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(16, 164, 74, 0.6); /* Ombre lors du focus */
+}
+
+
+/* Pourcentage */
+.percentage {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progressPercent {
+  text-align: center;
+  background-color: #eeeded;
+  color: #16a34a;
+  flex: 0 1 40%;
+  padding: 8px 0;
+  border-radius: 6px;
+  width: 100px;
+}
+
+.percentage .progressPercent {
+  background-color: #eeeded;
+  padding: 10px;
+  text-align: center;
+  width: 15rem;
+}
+
+/* Bouton de soumission */
+.btnSubmit {
+  align-items: center;
+  font-size: 15px;
+  font-family: "Nunito";
+  padding: 8px;
+  background-color: #125315;
+  color: #f5ecec;
+  border: none;
+  border-radius: 8px;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
