@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 @import 'tailwindcss';
+=======
+
+>>>>>>> 7cb862510af39779e4d755266dba6892211c79a0
 body {
     height: 100%;
     display: flex;
     flex-direction: column;
     padding: 0;
     margin: 0;
+<<<<<<< HEAD
     font-family: "Poppins";
+=======
+    font-family: "Calibri";
+>>>>>>> 7cb862510af39779e4d755266dba6892211c79a0
     font-style: normal;
     overflow-x: hidden;
 }
