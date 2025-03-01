@@ -141,16 +141,26 @@ export default function HeroGeometricLuxury({ title1 = "Green", title2 = "House"
       <div className="absolute inset-0 overflow-hidden">
         <LuxuryShape
           delay={0.2}
+<<<<<<< HEAD
           width={500}
           height={130}
+=======
+          width={600}
+          height={140}
+>>>>>>> 524d912287b76f7ece6fdf4591d98b0089bdf98e
           rotate={12}
           gradient="from-green-500/[0.2]"
           className="left-[-10%] md:left-[-5%] top-[15%] md:top-[20%]"
         />
         <LuxuryShape
           delay={0.4}
+<<<<<<< HEAD
           width={400}
           height={110}
+=======
+          width={500}
+          height={120}
+>>>>>>> 524d912287b76f7ece6fdf4591d98b0089bdf98e
           rotate={-15}
           gradient="from-emerald-500/[0.2]"
           className="right-[-5%] md:right-[0%] top-[70%] md:top-[75%]"
@@ -165,8 +175,13 @@ export default function HeroGeometricLuxury({ title1 = "Green", title2 = "House"
         />
         <LuxuryShape
           delay={0.5}
+<<<<<<< HEAD
           width={150}
           height={50}
+=======
+          width={200}
+          height={60}
+>>>>>>> 524d912287b76f7ece6fdf4591d98b0089bdf98e
           rotate={20}
           gradient="from-green-400/[0.2]"
           className="right-[15%] md:right-[20%] top-[10%] md:top-[15%]"
@@ -185,7 +200,11 @@ export default function HeroGeometricLuxury({ title1 = "Green", title2 = "House"
         >
           <motion.div variants={fadeUpVariants} custom={0}>
             <span className="inline-block px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-300 text-sm font-medium mb-8">
+<<<<<<< HEAD
               Group API-Leka
+=======
+              Transforming the Future
+>>>>>>> 524d912287b76f7ece6fdf4591d98b0089bdf98e
             </span>
           </motion.div>
 
