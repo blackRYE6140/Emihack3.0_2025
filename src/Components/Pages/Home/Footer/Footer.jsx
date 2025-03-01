@@ -2,23 +2,11 @@ import "../../../../assets/css/Footer.css";
 import { FaReact, FaNodeJs, FaFacebook, FaGithub, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { SiMongodb, SiExpress } from "react-icons/si";
 import Marquee from "react-fast-marquee";
-<<<<<<< HEAD
 import img3 from "../../../../assets/Images/EMIT.png";
 import img4 from "../../../../assets/Images/emitech.jpg";
 
 const Footer = () => {
   const partnerImages = [img3, img4];
-=======
-import img1 from "../../../../assets/Images/Acces_Banque.jpg";
-import img2 from "../../../../assets/Images/Akata.jpg";
-import img3 from "../../../../assets/Images/Computer.jpg";
-import img4 from "../../../../assets/Images/emitech.jpg";
-import img5 from "../../../../assets/Images/FiharySoft.jpg";
-import img6 from "../../../../assets/Images/relia.jpg";
-
-const Footer = () => {
-  const partnerImages = [img1, img2, img3, img4];
->>>>>>> 7cb862510af39779e4d755266dba6892211c79a0
   return (
     <footer className="footer-container">
     <div className="footer-content">

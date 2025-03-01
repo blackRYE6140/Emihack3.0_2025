@@ -1,5 +1,4 @@
 /* Container principal */
-<<<<<<< HEAD
 .globalContain{
   display: flex;
   align-items: center;
@@ -21,8 +20,6 @@
   align-items: flex-start;
   width: 40%;
 }
-=======
->>>>>>> 7cb862510af39779e4d755266dba6892211c79a0
 .containerQuiz {
   display: flex;
   flex-direction: column; /* Ajouté pour empiler les éléments */
@@ -32,16 +29,13 @@
   justify-content: center;
   gap: 2rem; /* Espacement entre les éléments */
   height: 70vh;
-<<<<<<< HEAD
 
  
-=======
   background: url("../svg/grid-globe.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: 50%;
   background-color: #e7e7e7;
->>>>>>> 7cb862510af39779e4d755266dba6892211c79a0
 }
 
 /* Niveau de difficulté en haut */
@@ -91,9 +85,7 @@
   outline: none;
   box-shadow: 0 0 0 4px rgba(16, 164, 74, 0.6); /* Ombre lors du focus */
 }
-<<<<<<< HEAD
 
-=======
 /* Progress bar */
 .ProgressBar {
   border: 1px solid #16a34a;
@@ -114,7 +106,6 @@
   border-radius: 5px;
   background: #16a34a;
 }
->>>>>>> 7cb862510af39779e4d755266dba6892211c79a0
 
 /* Pourcentage */
 .percentage {

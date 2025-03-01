@@ -9,26 +9,19 @@ import LoginForm from "./Components/Pages/Login/Login";
 import SignupForm from "./Components/Pages/Signup/Signup";
 import OTPForm from './Components/Pages/OTP/otp';
 import Whiteboard from './Components/Pages/white-board/whiteBoard';
-<<<<<<< HEAD
 import MyDoctor from './Components/Pages/MyDoctor/Mydoctor';
-=======
->>>>>>> 7cb862510af39779e4d755266dba6892211c79a0
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { tailChase} from "ldrs";
+import { tailChase } from "ldrs";
 import { useState, useEffect } from 'react';
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 7cb862510af39779e4d755266dba6892211c79a0
 tailChase.register();
 
 function Loader() {
   return (
     <div className="loader-container">
-      <l-tail-chase size="40" speed="1.5" color="#16a34a"/>
-      <p>Veuillez patientez . . .</p>
+      <l-tail-chase size="40" speed="1.5" color="#16a34a" />
+      <p>Veuillez patienter . . .</p>
     </div>
   );
 }
@@ -37,21 +30,18 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setLoading(true);
-    }, 1500); 
-  }, []);
+    }, 1500); // Attendre 1.5 secondes avant de changer l'état 'loading'
+
+    // Clear the timeout in case the component unmounts before the timer completes
+    return () => clearTimeout(timer);
+  }, []); // Dépendance vide pour que le useEffect soit exécuté une seule fois
 
   return (
-<<<<<<< HEAD
     <div className="appContainer font-poppins">
-=======
-    <div className="appContainer" style={{fontFamily:"Rigtheous"}}>
->>>>>>> 7cb862510af39779e4d755266dba6892211c79a0
       <ToastContainer />
-      {!loading ? (
-        <Loader />
-      ) : (
+      {loading ? (
         <Router>
           <Routes>
             <Route path="/" exact element={<LoginForm />} />
@@ -62,12 +52,11 @@ function App() {
             <Route path="/greenLand" element={<Layout><GreenLand /></Layout>} />
             <Route path="/experience" element={<Layout><Experience /></Layout>} />
             <Route path="/whiteBoard" element={<Layout><Whiteboard /></Layout>} />
-<<<<<<< HEAD
             <Route path="/mydoctor" element={<Layout><MyDoctor /></Layout>} />
-=======
->>>>>>> 7cb862510af39779e4d755266dba6892211c79a0
           </Routes>
         </Router>
+      ) : (
+        <Loader />
       )}
     </div>
   );

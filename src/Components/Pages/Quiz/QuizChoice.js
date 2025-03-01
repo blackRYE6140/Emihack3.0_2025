@@ -1,5 +1,4 @@
 const QuizzandResponse = [
-<<<<<<< HEAD
   {
     quiz: [
       {
@@ -53,8 +52,7 @@ const QuizzandResponse = [
         options: ["Oui", "Non"],
       }
     ]
-  }
-=======
+  },
     {
         quiz: {
             debutant: [
@@ -155,7 +153,6 @@ const QuizzandResponse = [
             ]
         }
     }
->>>>>>> 7cb862510af39779e4d755266dba6892211c79a0
 ];
 
 export default QuizzandResponse;

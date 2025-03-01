@@ -5,7 +5,6 @@ import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
 // Enregistrer les composants nécessaires de Chart.js
 Chart.register(ArcElement, Tooltip, Legend);
 
-<<<<<<< HEAD
 const PieChart = ({ yesCount, totalAnswered, level }) => {
     const noCount = totalAnswered - yesCount; // Calcul du nombre de "Non"
 
@@ -18,38 +17,38 @@ const PieChart = ({ yesCount, totalAnswered, level }) => {
                 backgroundColor: [
                     "rgb(5, 54, 16)", // Vert foncé pour "Oui"
                     "rgb(116, 7, 30)", // Rouge foncé pour "Non"
-=======
-const PieChart = ({ correctAnswers, incorrectAnswers, level }) => {
-    const data = {
-        labels: ["Réponses exactes", "Réponses fausses"],
-        datasets: [
-            {
-                label: "Résultats du Quiz",
-                data: [correctAnswers, incorrectAnswers],
-                backgroundColor: [
-                    "rgb(5, 54, 16)", // Vert foncé pour les bonnes réponses
-                    "rgb(116, 7, 30)", // Rouge foncé pour les mauvaises réponses
->>>>>>> 7cb862510af39779e4d755266dba6892211c79a0
                 ],
-                hoverOffset: 4,
+                hoverBackgroundColor: [
+                    "rgb(3, 72, 25)", // Couleur au survol pour "Oui"
+                    "rgb(144, 10, 42)", // Couleur au survol pour "Non"
+                ],
             },
         ],
     };
 
+    const options = {
+        responsive: true,
+        plugins: {
+            tooltip: {
+                callbacks: {
+                    label: function (context) {
+                        let label = context.label || '';
+                        let value = context.raw || 0;
+                        return `${label}: ${value} (${((value / totalAnswered) * 100).toFixed(2)}%)`;
+                    },
+                },
+            },
+            legend: {
+                position: "top",
+            },
+        },
+    };
+
     return (
-<<<<<<< HEAD
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100%" }}>
-        <h3>Votre état est : {level}</h3>
-        <div style={{ width: "400px", height: "500px", display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <Pie data={data} />
-        </div>
-    </div>
-=======
         <div>
-            <h3>Niveau : {level}</h3>
-            <Pie data={data} />
+            <h3>Résultats du niveau {level}</h3>
+            <Pie data={data} options={options} />
         </div>
->>>>>>> 7cb862510af39779e4d755266dba6892211c79a0
     );
 };
 

@@ -29,14 +29,14 @@ const Hero1 = () => {
                     viewport={{ once: true }}
                     className="hero1-text"
                 >
-                    <h2>C'est quoi Green House ?</h2>
+                    <h2>C'est quoi Epidemic Insights ?</h2>
                     <p>
-                        "Green House est une plateforme utilisateur intuitive dédiée
-                        à la gestion et à l’optimisation des espaces de vie écologiques.
-                        Grâce à cette plateforme, il devient plus simple d’adopter
-                        un mode de vie durable tout en profitant d’un confort moderne
-                        et personnalisé.."
+                        "Epidemic Insights est une plateforme utilisateur intuitive dédiée à la gestion
+                        et à l'analyse des épidémies mondiales. Grâce à cette plateforme, il devient plus facile
+                        de comprendre et de prédire les menaces sanitaires en utilisant l'intelligence artificielle
+                        et le Big Data, afin de protéger la santé publique et d'adopter des solutions préventives efficaces."
                     </p>
+
                 </motion.div>
             </div>
         </section>
