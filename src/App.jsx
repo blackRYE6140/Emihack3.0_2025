@@ -14,6 +14,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { tailChase } from "ldrs";
 import { useState, useEffect } from 'react';
+import ScrollToTop from './Components/ui/scrollToTop/scrollToTop';
+import CarteCentreDeSoin from './Components/Pages/Cartographie/carteCentreDeSoin';
 
 tailChase.register();
 
@@ -43,6 +45,7 @@ function App() {
       <ToastContainer />
       {loading ? (
         <Router>
+        <ScrollToTop/>
           <Routes>
             <Route path="/" exact element={<LoginForm />} />
             <Route path="/signup" element={<SignupForm />} />
@@ -53,6 +56,7 @@ function App() {
             <Route path="/experience" element={<Layout><Experience /></Layout>} />
             <Route path="/whiteBoard" element={<Layout><Whiteboard /></Layout>} />
             <Route path="/mydoctor" element={<Layout><MyDoctor /></Layout>} />
+            <Route path="/carteCentreDeSoin" element={<Layout><CarteCentreDeSoin /></Layout>} />
           </Routes>
         </Router>
       ) : (

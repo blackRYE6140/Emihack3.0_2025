@@ -1,0 +1,37 @@
+.theme-toggle {
+    width: 50px;
+    height: 25px;
+    background: linear-gradient(145deg, #3a5f2c, #26541b);
+    border-radius: 15px;
+    border: 2px solid #1e3b15;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    padding: 2px;
+  }
+  
+  .theme-toggle .toggle-circle {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #ffdd57, #f4c20d);
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .theme-toggle.dark {
+    background: linear-gradient(145deg, #1b2e14, #12240d);
+  }
+  
+  .theme-toggle.dark .toggle-circle {
+    background: radial-gradient(circle, #7ebc59, #5e9c40);
+    transform: translateX(25px);
+  }
+  
+  /* Appliquer le thème sombre au body */
+  .dark-mode {
+    background-color: #121212;
+    color: #d4d4d4;
+  }
+  

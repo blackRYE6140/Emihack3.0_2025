@@ -1,1 +1,114 @@
-/* @import 'tailwindcss' */
+:root {
+    --bag-color: #F5F5F5;  /* Fond clair pour une lisibilité optimale */
+    --text-color: #26405a; /* Gris foncé pour le texte */
+    --accent-color: #E74C3C; /* Rouge vif pour les éléments critiques (cas, alertes) */
+    --secondary-color: #3498DB; /* Bleu pour les actions et informations secondaires */
+    --border-color: #D8E2DC; /* Gris clair pour les bordures */
+    --success-color: #2ECC71; /* Vert pour les indicateurs positifs (rétablissements) */
+    --warning-color: #F1C40F; /* Jaune pour les avertissements */
+}
+
+[data-theme="dark"] {
+    --background-color:#26405a; /* Fond sombre pour le mode nuit */
+    --text-color: #ECF0F1; /* Texte clair pour le mode nuit */
+    --accent-color: #E74C3C; /* Rouge vif pour les éléments critiques */
+    --secondary-color: #3498DB; /* Bleu pour les actions secondaires */
+    --border-color: #2C3E50; /* Gris foncé pour les bordures */
+    --success-color: #27AE60; /* Vert foncé pour les indicateurs positifs */
+    --warning-color: #F39C12; /* Jaune orangé pour les avertissements */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Poppins", sans-serif;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* 🚨 Boutons */
+button {
+    background-color: var(--accent-color);
+    color: white;
+    border: 2px solid var(--border-color);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* 🚨 Header & Navbar */
+header {
+    background: linear-gradient(to bottom, var(--accent-color), var(--background-color));
+    padding: 15px 20px;
+    border-bottom: 2px solid var(--border-color);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 🚨 Cartes */
+.card {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* 🚨 Liens */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* 🚨 Mode sombre spécifique */
+[data-theme="dark"] .card {
+    background-color: #2C3E50;
+    border-color: var(--border-color);
+    box-shadow: none;
+}
+
+[data-theme="dark"] button {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] button:hover {
+    background-color: var(--secondary-color);
+}
+
+[data-theme="dark"] header {
+    background: linear-gradient(to bottom, var(--accent-color), var(--background-color));
+    box-shadow: none;
+}
+
+/* 🚨 Classes utilitaires pour les indicateurs */
+.alert-critical {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.alert-warning {
+    color: var(--warning-color);
+    font-weight: bold;
+}
+
+.alert-success {
+    color: var(--success-color);
+    font-weight: bold;
+}
