@@ -3,7 +3,7 @@ import { toast, Toaster } from "sonner"; // Importation de 'sonner' pour les not
 import ProgressBar from "./ProgressBar/ProgressBar";
 import ModalChart from "./ModalChart";
 import "../../../assets/css/Quiz.css";
-import QuizzandResponse from "./QuizChoice";
+import QuizandResponse from "./QuizChoice";
 import { motion } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera, OrbitControls, useGLTF } from "@react-three/drei";
@@ -25,10 +25,24 @@ const Quiz = () => {
     yesCount: 0,
     score: 0,
   });
+// Assurez-vous d'importer correctement QuizandResponse
 
-  const loadQuestions = (level) => {
-    // Fonction de chargement des questions
-  };
+const loadQuestions = (level) => {
+  const fetchedQuestions = QuizandResponse[0].quiz[level] || [];
+  if (fetchedQuestions.length > 0) {
+    setRep((prevRep) => ({
+      ...prevRep,
+      questionStocked: fetchedQuestions,
+      currentQuestionIndex: 0,
+      question: fetchedQuestions[0].question,
+      options: fetchedQuestions[0].options,
+      answer: fetchedQuestions[0].answer,
+    }));
+  } else {
+    console.log("Questions manquantes!");
+  }
+};
+  
 
   const levelGrade = (correct) => {
     if (correct > 10) {
@@ -75,11 +89,6 @@ const Quiz = () => {
     loadQuestions(rep.levelNames[rep.quizLevel]);
     levelGrade(rep.score);
   }, [rep.quizLevel]);
-
-  const DoctorModel = () => {
-    const { scene } = useGLTF("/models/doctor.glb"); // Charge le modèle 3D du docteur
-    return <primitive object={scene} scale={0.5} position={[0, -1, 0]} />;
-  };
 
   return (
     <div>

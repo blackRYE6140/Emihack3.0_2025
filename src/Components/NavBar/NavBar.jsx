@@ -12,11 +12,11 @@ import "driver.js/dist/driver.css";
 // Menu Items
 const menuItems = [
   { path: "/home", label: "Accueil" },
-  { path: "/quiz", label: "Quiz" },
-  { path: "/greenland", label: "GreenLand" },
-  { path: "/experience", label: "Experience" },
-  { path: "/whiteBoard", label: "Tableau blanc" },
-  { path: "/mydoctor", label: "MyDokotera" }
+  { path: "/quiz", label: "Consultation" },
+  { path: "/greenland", label: "Zone epidemique" },
+  { path: "/experience", label: "Alerte" },
+  { path: "/whiteBoard", label: "Visio" },
+  { path: "/mydoctor", label: "MyDoctor" }
 ];
 
 const menuItemVariants = {
