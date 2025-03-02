@@ -8,6 +8,7 @@ import confetti from 'canvas-confetti';
 import useAudio from '../../assets/Animations/Sound'; // Importer le hook personnalisé
 import { driver } from "driver.js";
 import "driver.js/dist/driver.css";
+import ThemeToggle from "../ui/switchMode/themeToggle";
 
 // Menu Items
 const menuItems = [
@@ -102,6 +103,7 @@ const NavBar = () => {
       <div className="nav-mobile" onClick={toggleMenu}>
         <FiAlignJustify />
       </div>
+      <ThemeToggle/>
     </nav>
   );
 };

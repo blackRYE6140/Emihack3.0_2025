@@ -1,7 +1,7 @@
 .harona-chat {
     width: 100%;
     margin: 0 auto;
-    background-color: #ffffff; /* Fond clair */
+    background-color: var(--background-color); /* Fond clair */
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -15,8 +15,8 @@
   
   
   .lohateny-chat {
-    background-color: #ffffff;
-    color: #333333; /* Texte sombre */
+    background-color: var(--background-color);
+    color: var(-text-color); /* Texte sombre */
     padding: 16px;
     display: flex;
     align-items: center; 
@@ -43,7 +43,8 @@
     flex-grow: 1;
     padding: 16px;
     overflow-y: auto;
-    background-color: #ffffff;
+    background-color: var(--background-color);
+    color: var(-text-color);
   }
   
   /* Messages style */
@@ -53,8 +54,8 @@
     border-radius: 8px;
     display: inline-block;
     background-color: transparent; /* Pas de fond */
-    color: #333333; /* Texte sombre */
-  }
+    color: var(-text-color);
+    }
   
   .hafatra.user {
     align-self: flex-end;
@@ -73,7 +74,7 @@
     align-items: center;
     justify-content: center;
     padding: 12px;
-    background-color: #ffffff;
+    background-color: var(--background-color);
     border-top: 1px solid #e0e0e0;
     position: relative;
     gap: 4px; /* Espace entre le textarea et le bouton */
@@ -88,8 +89,8 @@
     border-radius: 12px;
     font-size: 14px;
     outline: none;
-    background-color: #ffffff;
-    color: #333333;
+    background-color: var(--background-color);
+    color: var(-text-color);
     resize: none; /* Empêche le redimensionnement manuel */
     overflow-y: hidden; /* Cache la barre de défilement */
   }
@@ -103,7 +104,7 @@
     background-color: transparent; /* Pas de fond */
     border: none;
     padding: 10px;
-    color: #333333;
+    color: var(-text-color);
     cursor: pointer;
     font-size: 28px;
     transition: color 0.3s;

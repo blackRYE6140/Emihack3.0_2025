@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 2rem 1rem;
-  background-color: white;
+  background-color: var(--primary-bg); /* Utilisation de la variable */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
@@ -11,23 +11,21 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  transition: backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+  transition: backdrop-filter 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease; /* Ajout de background-color à la transition */
 }
 
 /* Effet flou */
 .nav-container.blurred {
   backdrop-filter: blur(100px); /* Flou appliqué à la navbar */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée quand l'effet flou est appliqué */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: relative;
-  width: 100%;
+  background-color: rgba(var(--background-color), 0.8); /* Fond semi-transparent */
 }
 
 /* Logo aligné à gauche */
 .nav-logo {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #16a34a;
+  color: var(--success-color); /* Utilisation de la variable */
   letter-spacing: 5px;
   padding: 4px;
 }
@@ -44,13 +42,13 @@
 
 .nav-link {
   position: relative;
-  color: #333;
+  color: var(--primary-text); /* Utilisation de la variable */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #16a34a;
+  color: var(--success-color); /* Utilisation de la variable */
 }
 
 /* Effet d’animation sous les liens */
@@ -61,7 +59,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background: #16a34a;
+  background: var(--success-color); /* Utilisation de la variable */
   opacity: 0;
   transition: all 0.3s ease;
 }
@@ -90,18 +88,17 @@
 }
 
 .icon {
-  color: #474747; /* Couleur verte */
+  color: var(--primary-text-text-color); /* Utilisation de la variable */
   padding: 0; /* Supprimer le padding */
   height: 35px;
   width: 50px;
   background: none; /* Pas de fond */
   border: none; /* Pas de bordure */
+  transition: color 0.3s ease; /* Ajout de transition */
 }
 
 .icon:hover {
-  color: #16a34a;
-  background: none; /* Pas de fond */
-  border: none; /* Pas de bordure */ /* Couleur verte */
+  color: var(--success-color); /* Utilisation de la variable */
 }
 
 /* Menu mobile */
@@ -112,38 +109,39 @@
 /* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
   .nav-links {
-  display: none;
-  flex-direction: column;
-  background-color: white;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  text-align: center;
-  z-index: 10;
-}
+    display: none;
+    flex-direction: column;
+    background-color: var(--background-color); /* Utilisation de la variable */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    z-index: 10;
+  }
 
-.nav-links.active {
-  display: flex;
-}
+  .nav-links.active {
+    display: flex;
+  }
 
-.nav-right {
-  display: none; /* Masquer les icônes dans le menu mobile */
-}
+  .nav-right {
+    display: none; /* Masquer les icônes dans le menu mobile */
+  }
 
-.nav-mobile {
-  display: flex;
-  padding-right: 1.5rem;
-  cursor: pointer;
-  font-size: 1.8rem;
-  border: none;
-  background: none;
-}
+  .nav-mobile {
+    display: flex;
+    padding-right: 1.5rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    border: none;
+    background: none;
+    color: var(--text-color); /* Utilisation de la variable */
+  }
 
-.nav-icon {
-  display: none;
-  flex-direction: column;
-}
+  .nav-icon {
+    display: none;
+    flex-direction: column;
+  }
 }
