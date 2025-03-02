@@ -23,7 +23,7 @@ const Hero1 = () => {
                         {/* Image HTML dans la scène */}
                         <Html position={[1, 2, 0]} center>
                             <div style={{ background: 'none', padding: '5rem' }}>
-                                <img src={ia} alt="ia" style={{ width: '350px', height: 'auto' }} />
+                                <img src={ia} alt="ia" style={{ width: '350px', height: 'auto' , borderRadius : "50%" }} />
                                 <p style={{color : "white"}}>Learning</p>
                             </div>
                         </Html>
@@ -40,12 +40,12 @@ const Hero1 = () => {
                 >
                     <h2>C'est quoi Epidemic Insights ?</h2>
                     <p>
-                        Epidemic Insights est une plateforme intuitive
+                        "Epidemic Insights est une plateforme intuitive
                         qui permet d’analyser, surveiller et prédire l’évolution
                         des épidémies en temps réel. Grâce à des outils basés sur
                         le Big Data et l’IA, elle facilite la prise de décisions
                         pour les professionnels de santé et les autorités en
-                        fournissant des données précises et exploitables.
+                        fournissant des données précises et exploitables."
                     </p>
                 </motion.div>
             </div>

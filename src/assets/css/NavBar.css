@@ -24,10 +24,11 @@
 /* Logo aligné à gauche */
 .nav-logo {
   font-size: 1.3rem;
-  font-weight: bold;
   color: var(--success-color); /* Utilisation de la variable */
   letter-spacing: 5px;
   padding: 4px;
+  font-weight: bold;
+  background: none;
 }
 
 /* Menu centré */
@@ -46,7 +47,9 @@
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
+.nav-link{
+  font-weight: lighter;
+}
 .nav-link:hover {
   color: var(--success-color); /* Utilisation de la variable */
 }
@@ -98,7 +101,8 @@
 }
 
 .icon:hover {
-  color: var(--success-color); /* Utilisation de la variable */
+  color: var(--success-color);
+  background: none; /* Utilisation de la variable */
 }
 
 /* Menu mobile */
