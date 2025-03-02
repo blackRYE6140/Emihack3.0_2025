@@ -105,16 +105,16 @@ const Hero2 = () => {
     </div>
     <div className="grid-container_rigth">
         {feature.map((feature, index) => (
-            <motion.div
-            key={feature.id}
-            className="feature-card"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }} // Animation seulement quand dans la vue
-            transition={{ duration: 0.5, delay: index * 0.3 }}
-          >
-            <h3>{feature.id}</h3> {/* Numéro de la fonctionnalité */}
-            <p>{feature.desc}</p>
-          </motion.div>
+           <motion.div
+           key={feature.id}
+           className="feature-card"
+           initial={{ opacity: 0, y: 50 }} // Démarrer plus bas avec opacité 0
+           whileInView={{ opacity: 1, y: 0 }} // Monter progressivement
+           transition={{ duration: 1, delay: index * 0.4, ease: "easeOut" }} // Animation plus longue et fluide
+         >
+           <h3>{feature.id}</h3> {/* Numéro de la fonctionnalité */}
+           <p>{feature.desc}</p>
+         </motion.div>
         ))}
       </div>
   </div>
