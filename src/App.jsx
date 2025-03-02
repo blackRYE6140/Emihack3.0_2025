@@ -51,10 +51,9 @@ function App() {
             <Route path="/signup" element={<SignupForm />} />
             <Route path="/otp" element={<OTPForm />} />
             <Route path="/home" element={<Layout><Home /></Layout>} />
-            <Route path="/quiz" element={<Layout><Quiz /></Layout>} />
-            <Route path="/greenLand" element={<Layout><GreenLand /></Layout>} />
-            <Route path="/experience" element={<Layout><Experience /></Layout>} />
-            <Route path="/whiteBoard" element={<Layout><Whiteboard /></Layout>} />
+            <Route path="/consultation" element={<Layout><Quiz /></Layout>} />
+            <Route path="/alerte" element={<Layout><Experience /></Layout>} />
+            <Route path="/visio" element={<Layout><Whiteboard /></Layout>} />
             <Route path="/mydoctor" element={<Layout><MyDoctor /></Layout>} />
             <Route path="/cartographie" element={<Layout><Cartographie/></Layout>} />
           </Routes>

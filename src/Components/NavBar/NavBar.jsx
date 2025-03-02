@@ -13,11 +13,11 @@ import ThemeToggle from "../ui/switchMode/themeToggle";
 // Menu Items
 const menuItems = [
   { path: "/home", label: "Accueil" },
-  { path: "/quiz", label: "Quiz" },
-  { path: "/greenland", label: "GreenLand" },
-  { path: "/experience", label: "Experience" },
-  { path: "/whiteBoard", label: "Tableau blanc" },
-  { path: "/mydoctor", label: "MyDokotera" }
+  { path: "/consultation", label: "Consultation" },
+  { path: "/cartographie", label: "Zone epidemique" },
+  { path: "/alerte", label: "Alerte" },
+  { path: "/visio", label: "Visio" },
+  { path: "/mydoctor", label: "MyDoctor" }
 ];
 
 const menuItemVariants = {
