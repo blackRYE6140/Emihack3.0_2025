@@ -1,7 +1,7 @@
 /* Footer Global */
 .footer-container {
     position: relative;
-    background-color: #fbf9f9;
+    background-color: var(--primary-bg);
     padding: 50px 20px;
     display: flex;
     flex-direction: column;
@@ -106,7 +106,7 @@
     bottom: 2rem; /* Ajuste la hauteur du texte */
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: var(--text-color);
     font-size: 16px;
     font-weight: bold;
     text-align: center;

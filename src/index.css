@@ -1,5 +1,5 @@
 :root {
-    --bag-color: #F5F5F5;  /* Fond clair pour une lisibilité optimale */
+    --background-color: #F5F5F5;  /* Fond clair pour une lisibilité optimale */
     --text-color: #26405a; /* Gris foncé pour le texte */
     --accent-color: #E74C3C; /* Rouge vif pour les éléments critiques (cas, alertes) */
     --secondary-color: #3498DB; /* Bleu pour les actions et informations secondaires */

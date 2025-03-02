@@ -15,7 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { tailChase } from "ldrs";
 import { useState, useEffect } from 'react';
 import ScrollToTop from './Components/ui/scrollToTop/scrollToTop';
-import CarteCentreDeSoin from './Components/Pages/Cartographie/carteCentreDeSoin';
+import Cartographie from './Components/Pages/Cartographie/cartographie';
 
 tailChase.register();
 
@@ -56,7 +56,7 @@ function App() {
             <Route path="/experience" element={<Layout><Experience /></Layout>} />
             <Route path="/whiteBoard" element={<Layout><Whiteboard /></Layout>} />
             <Route path="/mydoctor" element={<Layout><MyDoctor /></Layout>} />
-            <Route path="/carteCentreDeSoin" element={<Layout><CarteCentreDeSoin /></Layout>} />
+            <Route path="/cartographie" element={<Layout><Cartographie/></Layout>} />
           </Routes>
         </Router>
       ) : (
